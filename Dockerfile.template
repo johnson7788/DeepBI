@@ -5,8 +5,9 @@ EXPOSE 8338 8339 8340
 ARG skip_ds_deps=true
 # Controls whether to install dev dependencies. If need, set skip_dev_deps eq ''
 ARG skip_dev_deps=yes
-#RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
-#RUN echo "deb http://mirrors.aliyun.com/debian/ buster main" > /etc/apt/sources.list
+#修改阿里云源
+#CN#RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list.d/debian.sources
+#CN#RUN echo "deb http://mirrors.aliyun.com/debian/ buster main" > /etc/apt/sources.list
 ## Create user
 # RUN useradd --create-home deepbi
 ## Ubuntu use aliyun source
